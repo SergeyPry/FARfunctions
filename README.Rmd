@@ -8,9 +8,45 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Introduction
-This package focuses on  Fatality Analysis Reporting System (FARS) available from US National Highway Traffic Safety Administration. 
+This package focuses on  Fatality Analysis Reporting System (FARS) available from US National Highway Traffic Safety Administration. This system is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. The purpose of the package is to provide functions to analyze some aspects of the data
 
-```{r }
+## FARfunctions
+
+To start using the library, please do the following:
+```{r}
+## load devtools
+library(devtools)
+
+# install from GitHub
+install_github("SergeyPry/FARfunctions")
 
 ```
+
+A detailed example of how functions can be used in an integrated fashion will be provided in the vignette to the package. Here, you can see Help files for the functions in the package.
+
+**fars_read**
+```{r echo = FALSE}
+?fars_read
+```
+
+**make_filename**
+```{r echo = FALSE}
+?make_filename
+```
+
+**fars_read_years**
+```{r echo = FALSE}
+?fars_read_years
+```
+
+**fars_summarize_years**
+```{r echo = FALSE}
+?fars_summarize_years
+```
+
+**fars_map_state**
+```{r echo = FALSE}
+?fars_map_state
+```
+
 
