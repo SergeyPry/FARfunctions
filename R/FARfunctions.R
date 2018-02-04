@@ -10,10 +10,14 @@
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
+#' @import rappdirs
 #'
-#' @examples fars_read("data/accident_2013.csv.bz2")
+#' @examples fars_read("accident_2013.csv.bz2")
 #'
+#' @export
 fars_read <- function(filename) {
+        curr_path <- normalizePath("..")
+        filename <- file.path(curr_path,"FARfunctions", "R", "data", filename)
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
         data <- suppressMessages({
@@ -30,6 +34,7 @@ fars_read <- function(filename) {
 #' @return The function returns a string for the file name in the format "accident_%d.csv.bz2", where %d
 #' is a placeholder for the integer value of the year
 #'
+#' @export
 make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("accident_%d.csv.bz2", year)
@@ -47,8 +52,9 @@ make_filename <- function(year) {
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
 #'
-#' @examples fars_read_years(c(2014, 2015, 2016))
+#' @examples fars_read_years(c(2014, 2015))
 #'
+#' @export
 fars_read_years <- function(years) {
         lapply(years, function(year) {
                 file <- make_filename(year)
@@ -72,11 +78,14 @@ fars_read_years <- function(years) {
 #' @return A data frame containing months as observations, years as column names and number of individual
 #' observations as values
 #'
-#' @import dplyr
+#' @importFrom dplyr bind_rows
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarize
 #' @importFrom tidyr spread
 #'
-#' @examples fars_summarize_years(c(2014, 2015, 2016))
+#' @examples fars_summarize_years(c(2014, 2015))
 #'
+#' @export
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
@@ -93,12 +102,13 @@ fars_summarize_years <- function(years) {
 #'
 #' @note This function does not have any data ourput, instead, it produces a plot as a side effect of the function
 #'
-#' @import dplyr
+#' @importFrom dplyr filter
 #' @importFrom maps map
 #' @importFrom graphics points
 #'
 #' @examples fars_map_state(10, 2015)
 #'
+#' @export
 fars_map_state <- function(state.num, year) {
         filename <- make_filename(year)
         data <- fars_read(filename)

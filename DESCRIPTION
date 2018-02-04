@@ -1,12 +1,20 @@
 Package: FARfunctions
 Type: Package
-Title: What the Package Does (Title Case)
+Title: FARfunctions Provides Tools to query Data from the Fatal Accident Reporting System
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Sergey Prykhozhij
+Maintainer: Sergey Prykhozhij <s.prykhozhij@gmail.com>
+Description: The package has several useful functions which are the following:
+	1. fars_read - reads the data distributed together with the package.
+	2. make_filename - generates the filename for one of the datasets distributed with the package.
+	3. fars_read_years - compiles the data on the months when accidents happened in one or multiple years.
+	4. fars_summarize_years - summarizes the data compiled by fars_read_years into a table with rows for particular months and years as columns
+	5. fars_map_state - maps the accidents onto the state map, where a state is identified by a numerical ID.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

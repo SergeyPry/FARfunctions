@@ -1,0 +1,16 @@
+---
+title: "README.Rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+This package focuses on  Fatality Analysis Reporting System (FARS) available from US National Highway Traffic Safety Administration. 
+
+```{r }
+
+```
+
