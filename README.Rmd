@@ -18,34 +18,34 @@ To start using the library, please do the following:
 library(devtools)
 
 # install from GitHub
-install_github("SergeyPry/FARfunctions")
+install_github("SergeyPry/FARfunctions", force = TRUE)
 
 ```
 
 A detailed example of how functions can be used in an integrated fashion will be provided in the vignette to the package. Here, you can see Help files for the functions in the package.
 
 **fars_read**
-```{r echo = FALSE}
+```{r}
 ?fars_read
 ```
 
 **make_filename**
-```{r echo = FALSE}
+```{r}
 ?make_filename
 ```
 
 **fars_read_years**
-```{r echo = FALSE}
+```{r}
 ?fars_read_years
 ```
 
 **fars_summarize_years**
-```{r echo = FALSE}
+```{r}
 ?fars_summarize_years
 ```
 
 **fars_map_state**
-```{r echo = FALSE}
+```{r}
 ?fars_map_state
 ```
 
