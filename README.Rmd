@@ -7,6 +7,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+[![Build Status](https://travis-ci.org/SergeyPry/FARfunctions.svg?branch=master)](https://travis-ci.org/SergeyPry/FARfunctions)
+
+
 ## Introduction
 This package focuses on  Fatality Analysis Reporting System (FARS) available from US National Highway Traffic Safety Administration. This system is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. The purpose of the package is to provide functions to analyze some aspects of the data
 
