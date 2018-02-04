@@ -13,7 +13,7 @@ This package focuses on  Fatality Analysis Reporting System (FARS) available fro
 ## FARfunctions
 
 To start using the library, please do the following:
-```{r}
+```{r messages = FALSE, warnings = FALSE}
 ## load devtools
 library(devtools)
 
