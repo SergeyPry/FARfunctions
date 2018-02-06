@@ -49,6 +49,7 @@ make_filename <- function(year) {
 #'
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
+#' @importFrom dplyr %>%
 #'
 #' @examples
 #' \dontrun{fars_read_years(c(2014, 2015))}
@@ -80,6 +81,7 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr bind_rows
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
+#' @importFrom dplyr %>%
 #' @importFrom tidyr spread
 #'
 #' @examples
