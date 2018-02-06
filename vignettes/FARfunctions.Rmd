@@ -21,7 +21,7 @@ This package focuses on  Fatality Analysis Reporting System (FARS) available fro
 ## Example Usage
 For example, the package can simply read the data for further custom analysis by the user. It also provides the possibility of compiling the accidents according to the months when these occurred. Finally, it provides a rudimentary map of where within a particular state these accidents occurred.
 
-```{r}
+```{r eval = FALSE}
 # reading the data
 data <- fars_read("accident_2013.csv.bz2")
 
@@ -32,11 +32,11 @@ The user may be interested in exploring the association between particular sets 
 
 
 Next, we can show how to compile accidents according to their month of occurrence.
-```{r warnings = FALSE}
+```{r warnings = FALSE, eval = FALSE}
 fars_summarize_years(c(2014, 2015))
 ```
 
 Another application of the package is to plot the accidents onto a map of a
-```{r warnings = FALSE}
+```{r warnings = FALSE, eval = FALSE}
 fars_map_state(6, 2014)
 ```
