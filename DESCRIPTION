@@ -18,4 +18,8 @@ Suggests: knitr,
     rmarkdown,
     testthat
 VignetteBuilder: knitr
-Imports: FARfunctions
+Imports:
+  dplyr,
+  maps,
+  readr,
+  tidyr
