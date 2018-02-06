@@ -21,6 +21,6 @@ and produces a summary table of the number of observations attributed to each mo
 available.
 }
 \examples{
-fars_summarize_years(c(2014, 2015))
+\dontrun{fars_summarize_years(c(2014, 2015))}
 
 }

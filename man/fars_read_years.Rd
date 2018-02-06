@@ -21,6 +21,6 @@ based on a vector of year values and generates a list of data frames for further
 The function deals effectively with inappropriate input values.
 }
 \examples{
-fars_read_years(c(2014, 2015))
+\dontrun{fars_read_years(c(2014, 2015))}
 
 }

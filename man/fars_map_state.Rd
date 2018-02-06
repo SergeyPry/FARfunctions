@@ -20,6 +20,6 @@ accidents marked
 This function does not have any data ourput, instead, it produces a plot as a side effect of the function
 }
 \examples{
-fars_map_state(10, 2015)
+ \dontrun{fars_map_state(10, 2015)}
 
 }

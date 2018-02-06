@@ -23,6 +23,6 @@ file name is incorrect, it outputs an error.
 An error may result if the file is in a format that cannot be correctly read by the read_csv function
 }
 \examples{
-fars_read("accident_2013.csv.bz2")
+\dontrun{fars_read("accident_2013.csv.bz2")}
 
 }
